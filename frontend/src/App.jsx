@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
+import { Analytics } from '@vercel/analytics/react'
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
 import VerifyPage from './pages/VerifyPage'
@@ -27,6 +28,7 @@ export default function App() {
         } />
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
+      <Analytics />
     </>
   )
 }
